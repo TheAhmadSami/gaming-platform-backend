@@ -35,12 +35,12 @@
 
   //PUBLIC FUNCTIONS  *******************************************************
   function printResult($data){
-    echo $data;
+    echo json_encode($data);
     http_response_code(200);
   }
 
   function printError($mesaage, $code){
-    echo $mesaage;
+    echo json_encode($mesaage);
     http_response_code($code);
   }
 

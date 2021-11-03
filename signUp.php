@@ -29,20 +29,20 @@
 
             $token = setUserToken($userId);
 
-            printResult(json_encode("token: $token"));
+            printResult("token: $token");
           }
 
       }else{
-        printError(json_encode("{'status': 'error', 'code': '401', 'message': 'Username already exists'}"), 409);
+        printError("{'status': 'error', 'code': '401', 'message': 'Username already exists'}", 409);
       }//check username
 
 
     }else{
-      printError(json_encode("{'status': 'error', 'code': '401', 'message': 'Email already exists'}"), 409);
+      printError("{'status': 'error', 'code': '401', 'message': 'Email already exists'}", 409);
     }//check email
 
   }else{
-    printError(json_encode("{'status': 'error', 'code': '401', 'message': 'Authntication Error'}"), 401);
+    printError("{'status': 'error', 'code': '401', 'message': 'Authntication Error'}", 401);
   }//check server
 
 ?>
