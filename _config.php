@@ -3,8 +3,10 @@
   // error_reporting(0); 
   set_time_limit(0);
   require_once("_databaseConnection.php");
-  header('Content-Type: application/json');
-  
+  header("Content-Type: application/json; charset=UTF-8");
+  header('Access-Control-Allow-Origin: *');
+
+
   $db = new DB("127.0.0.1", "gaming_platform", "root", "");
 
   //API AUTHENTICATION  *******************************************************
