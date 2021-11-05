@@ -7,7 +7,6 @@
 
     $dbResult = $db->query("SELECT user_id FROM users_tokens WHERE token=:token", [':token'=>$token]);
     if ($dbResult) {
-      
       printResult($dbResult);
     }else{
       printError(false, 403);
